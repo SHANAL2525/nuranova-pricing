@@ -15,10 +15,10 @@ export default function Home() {
     <>
       <div id="home" />
       <section id="pricing" className="pricing-bg scroll-mt-20 py-10 sm:py-14 lg:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
             <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.18em] text-[var(--brand-blue-dark)]">{si ? "පැහැදිලි වෙබ් අඩවි මිල ගණන්" : "Clear website pricing"}</p>
-            <h1 className="text-4xl font-black tracking-tight text-[var(--brand-navy)] sm:text-5xl lg:text-6xl">{si ? "ඔබට ගැළපෙන වෙබ් අඩවි පැකේජය තෝරන්න" : "Find the right website price"}</h1>
+            <h1 className="text-3xl font-black tracking-tight text-[var(--brand-navy)] sm:text-5xl lg:text-6xl">{si ? "ඔබට ගැළපෙන වෙබ් අඩවි පැකේජය තෝරන්න" : "Find the right website price"}</h1>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[var(--text-secondary)] sm:text-lg">{si ? "පැකේජ, විශේෂාංග සහ මිල ගණන් සැසඳීමට ව්‍යාපාරික හෝ හෝටල් වෙබ් අඩවි තෝරන්න." : "Select Business Websites or Hotel Websites to compare packages, features and prices."}</p>
           </div>
           <PricingTabs />

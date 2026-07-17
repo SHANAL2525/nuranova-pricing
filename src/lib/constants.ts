@@ -3,10 +3,10 @@ export const company = {
   tagline: "Websites That Help Your Business Grow",
   description:
     "Modern websites, online ordering, booking and payment solutions for Sri Lankan businesses.",
-  phoneDisplay: "077 330 7535",
-  phoneInternational: "+94773307535",
-  whatsappNumber: "94773307535",
-  whatsappUrl: "https://wa.me/94773307535",
+  phoneDisplay: "076 330 7535",
+  phoneInternational: "+94763307535",
+  whatsappNumber: "94763307535",
+  whatsappUrl: "https://wa.me/94763307535",
   email: "nuranovasolutions@gmail.com",
 };
 

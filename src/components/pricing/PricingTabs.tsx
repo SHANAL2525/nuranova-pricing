@@ -49,10 +49,10 @@ export function PricingTabs() {
   }
 
   return (
-    <div className="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-blue-200 bg-white shadow-[0_24px_70px_rgba(20,38,92,0.14)]">
+    <div className="mx-auto w-full min-w-0 max-w-4xl overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-[0_18px_45px_rgba(20,38,92,0.12)] sm:rounded-3xl sm:shadow-[0_24px_70px_rgba(20,38,92,0.14)]">
       <div className="grid grid-cols-2 border-b border-[var(--border)] bg-[var(--brand-soft)] p-2" role="tablist" aria-label="Website category">
         {(["hotel", "business"] as const).map((item) => (
-          <button key={item} role="tab" aria-selected={category === item} onClick={() => chooseCategory(item)} className={category === item ? "brand-gradient min-h-14 rounded-xl px-3 font-extrabold text-white shadow-md transition" : "min-h-14 rounded-xl px-3 font-bold text-[var(--brand-deep)] transition hover:bg-white hover:text-[var(--brand-blue-dark)]"}>
+          <button key={item} role="tab" aria-selected={category === item} onClick={() => chooseCategory(item)} className={category === item ? "brand-gradient min-h-14 min-w-0 rounded-xl px-2 text-sm font-extrabold text-white shadow-md transition sm:px-3 sm:text-base" : "min-h-14 min-w-0 rounded-xl px-2 text-sm font-bold text-[var(--brand-deep)] transition hover:bg-white hover:text-[var(--brand-blue-dark)] sm:px-3 sm:text-base"}>
             {si ? (item === "business" ? "ව්‍යාපාරික වෙබ් අඩවි" : "හෝටල් වෙබ් අඩවි") : (item === "business" ? "Business Websites" : "Hotel Websites")}
           </button>
         ))}
@@ -60,13 +60,13 @@ export function PricingTabs() {
 
       <div className="grid grid-cols-3 border-b border-[var(--border)] bg-white p-2 sm:p-3" role="tablist" aria-label="Package level">
         {packages.map((item, index) => (
-          <button key={item.id} role="tab" aria-selected={packageIndex === index} onClick={() => setPackageIndex(index)} className={packageIndex === index ? "active-package-tab min-h-12 rounded-xl px-2 text-sm font-extrabold text-white shadow-md transition sm:text-base" : "min-h-12 rounded-xl px-2 text-sm font-bold text-[var(--text-secondary)] transition hover:bg-[var(--brand-light)] hover:text-[var(--brand-blue-dark)] sm:text-base"}>
+          <button key={item.id} role="tab" aria-selected={packageIndex === index} onClick={() => setPackageIndex(index)} className={packageIndex === index ? "active-package-tab min-h-12 min-w-0 rounded-xl px-1.5 text-xs font-extrabold text-white shadow-md transition sm:px-2 sm:text-base" : "min-h-12 min-w-0 rounded-xl px-1.5 text-xs font-bold text-[var(--text-secondary)] transition hover:bg-[var(--brand-light)] hover:text-[var(--brand-blue-dark)] sm:px-2 sm:text-base"}>
             {si ? ["මූලික", "මධ්‍යම", "උසස්"][index] : item.name.replace("Business ", "").replace("Hotel ", "")}
           </button>
         ))}
       </div>
 
-      <div key={selected.id} role="tabpanel" className="animate-package-in p-5 sm:p-8 lg:p-10">
+      <div key={selected.id} role="tabpanel" className="animate-package-in min-w-0 overflow-hidden p-4 sm:p-8 lg:p-10">
         <div className="flex flex-col gap-4 border-b border-[var(--border)] pb-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
             {selected.recommended ? <span className="inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-extrabold text-[var(--brand-blue-dark)]">{si ? "නිර්දේශිතයි" : "Recommended"}</span> : null}
@@ -89,8 +89,8 @@ export function PricingTabs() {
         <div className="py-6">
           <h4 className="text-sm font-extrabold uppercase tracking-[0.14em] text-[var(--text-muted)]">{si ? "පැකේජ විස්තර" : "Package details"}</h4>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-            {selected.features.map((feature) => <li key={feature} className="flex gap-3 rounded-xl bg-[var(--brand-soft)] p-3 text-sm font-semibold leading-6 text-[var(--text-secondary)] transition hover:bg-[var(--brand-light)]"><CheckCircle2 className="mt-0.5 shrink-0 text-[var(--success)]" size={18} />{si ? (siText[feature] || feature) : feature}</li>)}
-            <li className="support-period-row flex gap-3 rounded-xl p-3 text-sm font-extrabold leading-6"><CheckCircle2 className="mt-0.5 shrink-0" size={18} />{si ? siText[selected.supportPeriod] : selected.supportPeriod}</li>
+            {selected.features.map((feature) => <li key={feature} className="min-w-0 break-words flex gap-3 rounded-xl bg-[var(--brand-soft)] p-3 text-sm font-semibold leading-6 text-[var(--text-secondary)] transition hover:bg-[var(--brand-light)]"><CheckCircle2 className="mt-0.5 shrink-0 text-[var(--success)]" size={18} /><span className="min-w-0">{si ? (siText[feature] || feature) : feature}</span></li>)}
+            <li className="support-period-row flex min-w-0 gap-3 break-words rounded-xl p-3 text-sm font-extrabold leading-6"><CheckCircle2 className="mt-0.5 shrink-0" size={18} /><span className="min-w-0">{si ? siText[selected.supportPeriod] : selected.supportPeriod}</span></li>
           </ul>
         </div>
 
