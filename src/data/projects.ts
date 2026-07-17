@@ -1,0 +1,43 @@
+import type { Project } from "@/types";
+
+export const projects: Project[] = [
+  {
+    slug: "coastal-villa-booking-website",
+    title: "Coastal Villa Booking Website",
+    category: "Hospitality Concept",
+    concept: true,
+    problem: "A villa needs a direct booking website instead of relying only on listings.",
+    overview: "A mobile-first property website concept with room showcases, booking inquiries and availability display.",
+    challenge: "Visitors need to compare rooms, see amenities and contact the property quickly.",
+    strategy: "Prioritise room details, image-led sections, WhatsApp actions and a structured inquiry path.",
+    solution: "A fast hospitality website with booking forms, seasonal offers and admin-ready content areas.",
+    features: ["Villa showcase", "Room pages", "Booking inquiry", "Availability display", "Mobile-first design"],
+    technology: ["Next.js", "Tailwind CSS", "Route Handlers"],
+  },
+  {
+    slug: "restaurant-online-ordering-website",
+    title: "Restaurant Online Ordering Website",
+    category: "Restaurant Concept",
+    concept: true,
+    problem: "A restaurant needs a simple way to receive online food orders.",
+    overview: "A concept ordering website with menu management, cart flow, WhatsApp orders and payment options.",
+    challenge: "Customers need clear menu browsing and the business needs manageable orders.",
+    strategy: "Keep the menu fast, mobile-friendly and connected to WhatsApp/order notifications.",
+    solution: "A practical ordering system with admin-controlled menu items and structured order capture.",
+    features: ["Menu management", "Shopping cart", "WhatsApp orders", "Online payments", "Order dashboard"],
+    technology: ["Next.js", "React", "Payment integration"],
+  },
+  {
+    slug: "retail-ecommerce-website",
+    title: "Retail E-commerce Website",
+    category: "E-commerce Concept",
+    concept: true,
+    problem: "A retail shop needs a product catalogue and online order management.",
+    overview: "A concept e-commerce build for browsing products, customer accounts and promotional offers.",
+    challenge: "The shop needs product visibility and a clearer order pipeline.",
+    strategy: "Design clear categories, searchable products, reviews and simple checkout actions.",
+    solution: "A responsive e-commerce website with order tracking, coupons and admin management.",
+    features: ["Product catalogue", "Customer accounts", "Order management", "Reviews", "Discount coupons"],
+    technology: ["Next.js", "Tailwind CSS", "Admin dashboard"],
+  },
+];
